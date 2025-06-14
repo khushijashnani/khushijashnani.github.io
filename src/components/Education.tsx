@@ -21,17 +21,17 @@ const educations = [
 
 const Education = () => {
   return (
-    <section id="education" className="bg-white">
+    <section id="education" className="bg-card">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle>Education</SectionTitle>
         <div className="grid md:grid-cols-2 gap-8">
           {educations.map((edu, index) => (
             <div key={index} className="bg-background p-6 rounded-lg shadow-md">
-              <h3 className="text-xl font-bold text-gray-800">{edu.institution}</h3>
+              <h3 className="text-xl font-bold text-gray-800 dark:text-gray-100">{edu.institution}</h3>
               <p className="text-md font-semibold text-primary-foreground mt-1">{edu.degree}</p>
-              <p className="text-sm text-gray-500 my-2">{edu.period}</p>
-              <p className="text-gray-600 font-medium">{edu.grade}</p>
-              <p className="text-gray-600 mt-2">{edu.details}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 my-2">{edu.period}</p>
+              <p className="text-gray-600 dark:text-gray-300 font-medium">{edu.grade}</p>
+              <p className="text-gray-600 dark:text-gray-300 mt-2">{edu.details}</p>
             </div>
           ))}
         </div>

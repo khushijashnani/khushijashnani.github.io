@@ -6,32 +6,32 @@ import { Code, Database, BrainCircuit, Users, CheckCircle, ShieldCheck } from 'l
 const skillCategories = [
   { 
     name: "Languages", 
-    icon: <Code className="w-8 h-8 text-primary-foreground" />,
+    icon: <Code className="w-8 h-8 text-yellow-950" />,
     skills: ["Python", "Java", "TypeScript", "JavaScript", "SQL"] 
   },
   { 
     name: "Frameworks & Libraries", 
-    icon: <BrainCircuit className="w-8 h-8 text-primary-foreground" />,
+    icon: <BrainCircuit className="w-8 h-8 text-yellow-950" />,
     skills: ["React", "Angular", "Flask", "Flutter", "GraphQL"]
   },
   { 
     name: "Databases", 
-    icon: <Database className="w-8 h-8 text-primary-foreground" />,
+    icon: <Database className="w-8 h-8 text-yellow-950" />,
     skills: ["Oracle", "Graph Databases", "Firebase"] 
   },
   { 
     name: "Cloud & DevOps", 
-    icon: <ShieldCheck className="w-8 h-8 text-primary-foreground" />,
+    icon: <ShieldCheck className="w-8 h-8 text-yellow-950" />,
     skills: ["AWS", "GCP", "Docker", "Terraform", "CI/CD"]
   },
   { 
     name: "Methodologies", 
-    icon: <Users className="w-8 h-8 text-primary-foreground" />,
+    icon: <Users className="w-8 h-8 text-yellow-950" />,
     skills: ["Agile", "Scrum", "Product Development"] 
   },
   { 
     name: "Core Skills", 
-    icon: <CheckCircle className="w-8 h-8 text-primary-foreground" />,
+    icon: <CheckCircle className="w-8 h-8 text-yellow-950" />,
     skills: ["Problem Solving", "Data Structures", "Algorithms"] 
   },
 ];
@@ -43,15 +43,17 @@ const Skills = () => {
         <SectionTitle>Skills</SectionTitle>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
-              <div className="inline-block p-4 bg-primary/20 rounded-full mb-4">
-                {category.icon}
-              </div>
-              <h3 className="text-xl font-bold text-gray-800 mb-4">{category.name}</h3>
-              <div className="flex flex-wrap justify-center gap-2">
-                {category.skills.map((skill, i) => (
-                  <span key={i} className="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">{skill}</span>
-                ))}
+            <div className="bg-white rounded-lg shadow-md transition-transform duration-300 hover:shadow-lg hover:scale-105">
+              <div key={index} className="p-6 rounded-lg text-center">
+                <div className="inline-block p-4 bg-primary/20 rounded-full mb-4">
+                  {category.icon}
+                </div>
+                <h3 className="text-xl font-bold text-gray-800 mb-4">{category.name}</h3>
+                <div className="flex flex-wrap justify-center gap-2">
+                  {category.skills.map((skill, i) => (
+                    <span key={i} className="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">{skill}</span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}

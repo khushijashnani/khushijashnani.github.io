@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { ThemeToggle } from './ThemeToggle';
+import { set } from 'date-fns';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,9 +10,9 @@ const Header = () => {
   const navLinks = [
     { title: 'About', id: 'about' },
     { title: 'Experience', id: 'experience' },
+    { title: 'Education', id: 'education' },
     { title: 'Projects', id: 'projects' },
     { title: 'Skills', id: 'skills' },
-    { title: 'Education', id: 'education' },
     { title: 'Contact', id: 'contact' },
   ];
 
@@ -22,6 +23,8 @@ const Header = () => {
       setIsScrolled(false);
     }
   };
+
+  
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -43,7 +46,7 @@ const Header = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="text-2xl font-bold text-gray-800 dark:text-gray-100 cursor-pointer" onClick={() => scrollToSection('hero')}>
-            Khushi Jashnani
+            K / J
           </div>
           <div className="hidden md:flex items-center space-x-4">
             <nav className="flex space-x-6">

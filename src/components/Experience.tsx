@@ -81,7 +81,7 @@ const Experience = () => {
 const ExperienceCard = ({ role, company, period, description, skills }: (typeof experiences)[0]) => (
   <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
     <h3 className="text-xl font-bold text-gray-800">{role}</h3>
-    <p className="text-md font-semibold text-primary-foreground mb-1">{company}</p>
+    <p className="text-md font-semibold text-primary-foreground mb-1 text-purple-600">{company}</p>
     <p className="text-sm text-gray-500 mb-3">{period}</p>
     <p className="text-gray-600 mb-4">{description}</p>
     {skills && (
